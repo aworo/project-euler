@@ -15,17 +15,26 @@ Completed? No
 
  *
  */
-var highestpalindrome
+var highestpalindrome = 0
 
-for (i = 10; i < 100; i++) {
-	for (j = 10; j < 100; j++) {
-		if palindromeCheck((i * j) == true {
+for (var i = 10; i < 100; i++) {  /* Starting with 2 digit numbers until I can match the example*/
+	for (var j = 10; j < 100; j++) {
+		if ((palindromeCheck(i * j) == true) && ((i*j) > highestpalindrome)) {
 			highestpalindrome = (i*j);
 		}
+	}
 }
 
 function palindromeCheck(checknum) {
-	for (k = 0; k < palindrome.length; k++) {
-
+	var product = (checknum).toString();
+	var reverseproduct = ""
+	for (var k = product.length; k > 0; k--) {
+		
+		reverseproduct = reverseproduct + product.charAt(k-1);
+	}
+	if (product == Number(reverseproduct)) {
+		return true;
 	}
 }
+
+document.write(highestpalindrome);
