@@ -10,16 +10,33 @@ What is the 10 001st prime number?"
 
 Solution by: A.Woroniuk 
 
-Completed? No
+Completed? Yes
 
-Notes&Thoughts: 
+Notes&Thoughts: A few items are clunky, but it works
 
 */
 
 var primecounter = 0
-var i = 0
-while (primecounter != 6) {
-	for 
+var i = 2
+while (primecounter != 10001) {
+	var isPrime = true
+	for (var j = 2; j < i; j++) {
+		if (i % j == 0) {
+			isPrime = false;
+			break
+		}
+		else {
+			isPrime = true;
+			
+		}
+
+	}
+	i++
+	if (isPrime == true) {
+		primecounter ++;
+	}
+
+	
 }
 
-alert("The 6th prime is: " + i)
+alert("The 6th prime is: " + (i-1));
