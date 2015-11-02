@@ -10,8 +10,31 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 Solution by: A.Woroniuk 
 
-Completed? Np
+Completed? Yes
 
-Notes&Thoughts: I'm fairly sure I could have used better JS functions to clean up my palindromeCheck function. Ah well.
+Notes&Thoughts: A missing paranthesis had me stumped for a while. 
+
+*/
+
+var counter = 0 
+var divisible20 = false
+
+while (divisible20 == false) {
+	counter++;
+	
+	for (var i = 1; i < 21; i++) {
+		
+		if (counter % i == 0) {
+			divisible20 = true;
+		}
+		
+		else {
+			divisible20 = false;
+			break;
+		}
+	}
+	
+}
 
 
+alert("The smallest positive number that is evenly divisible by 1-20 is " + counter);
