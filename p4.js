@@ -10,15 +10,18 @@ Find the largest palindrome made from the product of two 3-digit numbers."
 
 Solution by: A.Woroniuk 
 
-Completed? No
+Completed? Yes 
+
+Notes&Thoughts: I'm fairly sure I could have used better JS functions to clean up my palindromeCheck function. Ah well.
+
 
 
  *
  */
 var highestpalindrome = 0
 
-for (var i = 10; i < 100; i++) {  /* Starting with 2 digit numbers until I can match the example*/
-	for (var j = 10; j < 100; j++) {
+for (var i = 100; i < 1000; i++) {  /* Starting with 2 digit numbers until I can match the example*/
+	for (var j = 100; j < 1000; j++) {
 		if ((palindromeCheck(i * j) == true) && ((i*j) > highestpalindrome)) {
 			highestpalindrome = (i*j);
 		}
@@ -37,4 +40,4 @@ function palindromeCheck(checknum) {
 	}
 }
 
-document.write(highestpalindrome);
+document.write("Largest palindrome made from the product of two 3-digit numbers: " + highestpalindrome);
