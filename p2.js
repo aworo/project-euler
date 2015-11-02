@@ -12,12 +12,26 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 Solution by: A.Woroniuk 
 
-Completed? No
+Completed? Yes
 
  *
  */
 
-var number = 4000000
-var eventotal = 0
+var maxnumber = 4000000;
+var eventotal = 0;
+var first = 0;
+var second = 1;
+var nextnumber = 0;
 
-for (var i = 1; i < number; i )
+
+while (nextnumber < maxnumber) {
+	if (nextnumber % 2 == 0) {
+ 		eventotal = eventotal + nextnumber;
+ 	}
+
+ 	nextnumber = first + second;
+ 	first = second;
+ 	second = nextnumber;
+
+}
+document.write(eventotal)
