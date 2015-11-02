@@ -15,3 +15,11 @@ Completed? No
 Notes&Thoughts: 
 
 */
+
+var primecounter = 0
+var i = 0
+while (primecounter != 6) {
+	for 
+}
+
+alert("The 6th prime is: " + i)
